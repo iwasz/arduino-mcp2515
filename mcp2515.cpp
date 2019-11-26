@@ -195,7 +195,7 @@ MCP2515::ERROR MCP2515::setBitrate(const CAN_SPEED canSpeed, CAN_CLOCK canClock)
         return error;
     }
 
-    uint8_t set, cfg1, cfg2, cfg3;
+    uint8_t set, cfg1{MCP_8MHz_500kBPS_CFG1}, cfg2{MCP_8MHz_500kBPS_CFG2}, cfg3{MCP_8MHz_500kBPS_CFG3};
     set = 1;
     switch (canClock)
     {
